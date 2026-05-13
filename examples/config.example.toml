@@ -1,0 +1,14 @@
+# Minimal skillctl config — copy to ~/.skillctl/config.toml and edit.
+
+[[sources]]
+status = "active"
+root = "~/.claude/skills"
+glob = "*/SKILL.md"
+
+[[sources]]
+status = "active"
+root = "~/.claude/commands"
+glob = "*.md"
+
+[budget]
+description_budget = 15000

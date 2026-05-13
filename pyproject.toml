@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "skillctl"
+version = "0.1.0"
+description = "Meta-layer for Claude Code skills: catalog, health check, cross-machine sync, usage stats."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+authors = [{ name = "Frank Shen" }]
+keywords = ["claude-code", "skills", "agent", "anthropic", "catalog"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.scripts]
+skillctl = "skillctl.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/frankshen/skillctl"
+Issues = "https://github.com/frankshen/skillctl/issues"
+
+[tool.setuptools.packages.find]
+include = ["skillctl*"]
