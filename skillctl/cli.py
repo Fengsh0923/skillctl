@@ -136,7 +136,7 @@ def cmd_init(cfg: Config, args: argparse.Namespace) -> int:
     return 0
 
 
-STARTER_CONFIG = """# skillctl configuration. See https://github.com/frankshen/skillctl#config
+STARTER_CONFIG = """# skillctl configuration. See https://github.com/Fengsh0923/skillctl#config
 
 [paths]
 catalog_dir = "~/.skillctl/catalog"

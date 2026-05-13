@@ -25,8 +25,8 @@ classifiers = [
 skillctl = "skillctl.cli:main"
 
 [project.urls]
-Homepage = "https://github.com/frankshen/skillctl"
-Issues = "https://github.com/frankshen/skillctl/issues"
+Homepage = "https://github.com/Fengsh0923/skillctl"
+Issues = "https://github.com/Fengsh0923/skillctl/issues"
 
 [tool.setuptools.packages.find]
 include = ["skillctl*"]

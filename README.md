@@ -18,7 +18,10 @@ Zero runtime dependencies. Single binary. Python 3.11+.
 ## Install
 
 ```bash
-pip install skillctl   # not on PyPI yet — clone the repo and `pip install -e .`
+# Not on PyPI yet:
+git clone https://github.com/Fengsh0923/skillctl.git
+cd skillctl
+pip install -e .
 ```
 
 ## Quick start
