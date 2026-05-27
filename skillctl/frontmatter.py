@@ -55,10 +55,20 @@ def _parse_yaml_block(text: str) -> dict:
         i += 1
         if i < len(lines) and lines[i].startswith("  "):
             buf = []
+            is_list = lines[i].lstrip().startswith("- ")
             while i < len(lines) and (lines[i].startswith("  ") or lines[i].strip() == ""):
                 if lines[i].strip():
                     buf.append(lines[i].strip())
                 i += 1
             if buf:
-                result[key] = " ".join(buf)
+                if is_list and all(b.startswith("- ") for b in buf):
+                    items = []
+                    for b in buf:
+                        v = b[2:].strip()
+                        if (v.startswith('"') and v.endswith('"')) or (v.startswith("'") and v.endswith("'")):
+                            v = v[1:-1]
+                        items.append(v)
+                    result[key] = items
+                else:
+                    result[key] = " ".join(buf)
     return result
