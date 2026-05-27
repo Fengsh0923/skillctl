@@ -22,10 +22,8 @@ status = "active"          # active | archival | reference | deprecated | runtim
 root   = "~/.claude/skills"
 glob   = "*/SKILL.md"
 
-[[sources]]
-status = "active"
-root   = "~/.claude/commands"
-glob   = "*.md"
+# Do NOT add ~/.claude/commands here — those are slash-command definitions,
+# not skills, and scanning them pollutes the catalog.
 
 [[sources]]
 status = "archival"

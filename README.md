@@ -82,10 +82,8 @@ status = "active"
 root = "~/.claude/skills"
 glob = "*/SKILL.md"
 
-[[sources]]
-status = "active"
-root = "~/.claude/commands"
-glob = "*.md"
+# Note: ~/.claude/commands/ holds slash-command definitions, not skills.
+# Don't add it as a source — it pollutes the catalog.
 ```
 
 ## Why this exists

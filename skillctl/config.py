@@ -104,8 +104,11 @@ class Config:
 
 
 def _default_sources() -> list[dict]:
-    """Sensible defaults: scan ~/.claude/skills and ~/.claude/commands."""
+    """Sensible default: scan ~/.claude/skills for SKILL.md files.
+
+    Note: ~/.claude/commands/ holds Claude Code slash-command definitions,
+    not skills — do not scan it by default (it pollutes the catalog).
+    """
     return [
         {"status": "active", "root": "~/.claude/skills", "glob": "*/SKILL.md"},
-        {"status": "active", "root": "~/.claude/commands", "glob": "*.md"},
     ]

@@ -5,10 +5,8 @@ status = "active"
 root = "~/.claude/skills"
 glob = "*/SKILL.md"
 
-[[sources]]
-status = "active"
-root = "~/.claude/commands"
-glob = "*.md"
+# ~/.claude/commands/ holds slash-command definitions, not skills —
+# scanning it pollutes the catalog, so it is intentionally omitted.
 
 [budget]
 description_budget = 15000

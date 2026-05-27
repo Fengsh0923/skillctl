@@ -152,10 +152,8 @@ status = "active"
 root = "~/.claude/skills"
 glob = "*/SKILL.md"
 
-[[sources]]
-status = "active"
-root = "~/.claude/commands"
-glob = "*.md"
+# Note: ~/.claude/commands/ holds slash-command definitions, not skills.
+# Scanning it pollutes the catalog, so it is not a default source.
 
 # Example: a folder of skills you've collected but not enabled yet.
 # [[sources]]
